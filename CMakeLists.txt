@@ -42,7 +42,10 @@ add_executable(meshfix-bin main.cpp)
 
 install(TARGETS meshfix
     ARCHIVE DESTINATION lib)
-install(FILES meshfix.h ext_tri_mesh_to_mesh.h mesh_to_ext_tri_mesh.h
+install(FILES
+    meshfix.h ext_tri_mesh_to_mesh.h mesh_to_ext_tri_mesh.h
+    DESTINATION include)
+install(DIRECTORY ./JMeshExt-1.0alpha_src/include/ ./JMeshExt-1.0alpha_src/JMeshLib-1.2/include/
     DESTINATION include)
 
 target_link_libraries(
