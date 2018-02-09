@@ -20,3 +20,7 @@ file(GLOB SOURCES_SRC "${PROJECT_SOURCE_DIR}/src/*.cpp")
 add_library(jmeshext STATIC 
   ${SOURCES_JRS_Predicates} 
   ${SOURCES_SRC})
+
+install(DIRECTORY ./include/
+    DESTINATION include)
+install(TARGETS jmeshext ARCHIVE DESTINATION lib)

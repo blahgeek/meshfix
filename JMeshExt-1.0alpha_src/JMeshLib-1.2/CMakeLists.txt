@@ -18,3 +18,8 @@ add_library(jmesh STATIC
   ${SOURCES_MESH_STRUCTURE}
   ${SOURCES_OBJECTS} 
   ${SOURCES_PRIMITIVES})
+
+install(DIRECTORY ./include/
+    DESTINATION include)
+install(TARGETS jmesh
+    ARCHIVE DESTINATION lib)
