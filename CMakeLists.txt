@@ -40,6 +40,11 @@ endif()
 add_library(meshfix STATIC meshfix.cpp)
 add_executable(meshfix-bin main.cpp)
 
+install(TARGETS meshfix
+    ARCHIVE DESTINATION lib)
+install(FILES meshfix.h ext_tri_mesh_to_mesh.h mesh_to_ext_tri_mesh.h
+    DESTINATION include)
+
 target_link_libraries(
   meshfix-bin 
   meshfix 
